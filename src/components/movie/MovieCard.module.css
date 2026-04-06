@@ -1,0 +1,143 @@
+.card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideUp 0.5s ease;
+}
+
+.card:hover {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 40px 0 rgba(139, 92, 246, 0.25), 0 0 20px rgba(139, 92, 246, 0.15);
+  transform: translateY(-4px);
+}
+
+.poster {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+
+.posterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .posterImage {
+  transform: scale(1.1);
+}
+
+.posterOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .posterOverlay {
+  opacity: 1;
+}
+
+.ratingBadge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.9), rgba(245, 158, 11, 0.9));
+  color: #000;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.ratingIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.genreOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .genreOverlay {
+  transform: translateY(0);
+}
+
+.genreList {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.genreList::-webkit-scrollbar {
+  display: none;
+}
+
+.genre {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 9999px;
+  color: white;
+  white-space: nowrap;
+}
+
+.content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-weight: 600;
+  color: white;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  transition: color 0.2s ease;
+}
+
+.card:hover .title {
+  color: var(--color-primary-300);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metaIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}

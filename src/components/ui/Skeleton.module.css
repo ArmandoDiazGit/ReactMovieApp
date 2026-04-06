@@ -1,0 +1,164 @@
+.skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+.default {
+  border-radius: 0.25rem;
+}
+
+.card {
+  aspect-ratio: 2 / 3;
+  border-radius: 0.75rem;
+}
+
+.text {
+  height: 1rem;
+  border-radius: 0.25rem;
+}
+
+.title {
+  height: 2rem;
+  border-radius: 0.25rem;
+}
+
+.circle {
+  border-radius: 9999px;
+}
+
+/* Movie Card Skeleton */
+.cardSkeleton {
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+}
+
+.cardContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardTitle {
+  height: 1rem;
+  width: 75%;
+  border-radius: 0.25rem;
+}
+
+.cardText {
+  height: 0.75rem;
+  width: 50%;
+  border-radius: 0.25rem;
+}
+
+.cardTags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 9999px;
+}
+
+/* Hero Skeleton */
+.heroSkeleton {
+  position: relative;
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .heroSkeleton {
+    height: 600px;
+  }
+}
+
+.heroContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .heroContent {
+    padding: 4rem;
+  }
+}
+
+.heroTitle {
+  height: 3rem;
+  width: 16rem;
+  border-radius: 0.25rem;
+}
+
+.heroText {
+  height: 1rem;
+  max-width: 32rem;
+  border-radius: 0.25rem;
+}
+
+.heroTextHalf {
+  width: 75%;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.heroButton {
+  height: 3rem;
+  width: 8rem;
+  border-radius: 0.75rem;
+}
+
+/* Cast Skeleton */
+.castList {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.castItem {
+  flex-shrink: 0;
+  width: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.castCircle {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 9999px;
+}
+
+.castText {
+  height: 0.75rem;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.castTextHalf {
+  width: 75%;
+}

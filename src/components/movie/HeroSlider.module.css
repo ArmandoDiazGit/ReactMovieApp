@@ -1,0 +1,235 @@
+.hero {
+  position: relative;
+  height: 450px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 550px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    height: 650px;
+  }
+}
+
+.heroInner {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.7s ease;
+}
+
+.heroGradient1 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+}
+
+.heroGradient2 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0f0c29 0%, transparent 50%);
+}
+
+.navButtons {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.hero:hover .navButton {
+  opacity: 1;
+}
+
+.navButton:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prevButton {
+  left: 1rem;
+}
+
+.nextButton {
+  right: 1rem;
+}
+
+.navIcon {
+  color: white;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    padding: 4rem;
+  }
+}
+
+.contentInner {
+  max-width: 42rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.badges {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  background: rgba(139, 92, 246, 0.8);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.genreBadge {
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.movieTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: white;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (min-width: 768px) {
+  .movieTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movieTitle {
+    font-size: 3.75rem;
+  }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rating {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.ratingMax {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.overview {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  max-width: 32rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (min-width: 768px) {
+  .overview {
+    font-size: 1rem;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.indicatorActive {
+  width: 2rem;
+  background: var(--color-primary-400);
+}
