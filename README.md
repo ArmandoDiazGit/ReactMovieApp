@@ -14,8 +14,8 @@ A React-based movie discovery app for browsing, searching, and exploring movies 
 
 ## Screenshots
 
-| Home | Search | Movie Details |
-|------|--------|---------------|
+| Home
+|------|
 | ![Home](public/screenshots/home.png)
 
 ## Tech Stack
